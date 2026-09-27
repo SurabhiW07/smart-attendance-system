@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Attendance System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Smart Attendance System</h1>
+        <p>Student Attendance Management</p>
+    </header>
+
+    <nav>
+    <button onclick="goToSection('dashboard')">Dashboard</button>
+    <button onclick="goToSection('students')">Students</button>
+    <button onclick="goToSection('faculty')">Faculty</button>
+    <button onclick="goToSection('attendance')">Attendance</button>
+    <button onclick="goToSection('lowAttendance')">Low Attendance</button>
+</nav>
+
+  <main>
+
+   <div class="cards">
+
+    <div class="card student-card">
+        <div class="card-icon">👨‍🎓</div>
+        <h3>Students</h3>
+        <p id="studentCount">0</p>
+    </div>
+
+    <div class="card boy-card">
+        <div class="card-icon">👦</div>
+        <h3>Boys</h3>
+        <p id="boyCount">0</p>
+    </div>
+
+    <div class="card girl-card">
+        <div class="card-icon">👧</div>
+        <h3>Girls</h3>
+        <p id="girlCount">0</p>
+    </div>
+
+    <div class="card faculty-card">
+        <div class="card-icon">👨‍🏫</div>
+        <h3>Faculty</h3>
+        <p id="facultyCount">0</p>
+    </div>
+
+    <div class="card attendance-card">
+        <div class="card-icon">📋</div>
+        <h3>Attendance</h3>
+        <p id="attendanceCount">0</p>
+    </div>
+
+    <div class="card low-card">
+        <div class="card-icon">⚠️</div>
+        <h3>Low Attendance</h3>
+        <p id="lowAttendanceCount">0</p>
+    </div>
+
+</div>
+
+
+    <!-- Student Management -->
+    <section id="students">
+        <h2>Student Registration</h2>
+
+        <div class="student-form">
+    <input type="text" id="studentName" placeholder="Student Name">
+
+    <input type="text" id="studentUsn" placeholder="USN">
+
+    <input type="number" id="studentSemester" placeholder="Semester">
+
+    <input type="text" id="studentDivision" placeholder="Division">
+
+    <select id="studentGender">
+        <option value="">Select Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+    </select>
+
+    <input type="tel" id="studentPhone" placeholder="Phone Number">
+
+    <input type="email" id="studentEmail" placeholder="Email">
+
+    <button id="addStudentBtn">Register Student</button>
+</div>
+
+        <h3>Student List</h3>
+
+        <table>
+            <thead>
+                <tr>
+    <th>Name</th>
+    <th>USN</th>
+    <th>Semester</th>
+    <th>Division</th>
+    <th>Gender</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>Actions</th>
+</tr>
+            </thead>
+
+            <tbody id="studentTableBody">
+                <!-- Students will appear here -->
+            </tbody>
+        </table>
+
+    </section>
+
+
+    <!-- Faculty Management -->
+<section id="faculty">
+
+    <h2>Faculty Registration</h2>
+
+    <div class="faculty-form">
+
+        <input type="text" id="facultyName" placeholder="Faculty Name">
+
+        <input type="text" id="facultyId" placeholder="Faculty ID">
+
+        <input type="email" id="facultyEmail" placeholder="Email">
+
+        <input type="text" id="facultySubject" placeholder="Subject">
+
+        <button id="addFacultyBtn">Add Faculty</button>
+
+    </div>
+
+    <h3>Faculty List</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Faculty ID</th>
+                <th>Email</th>
+                <th>Subject</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody id="facultyTableBody">
+            <!-- Faculty will appear here -->
+        </tbody>
+    </table>
+
+</section>
+
+
+   <!-- Attendance Management -->
+<section id="attendance">
+
+    <h2>Attendance Management</h2>
+
+    <div class="attendance-form">
+
+        <select id="attendanceStudent">
+    <option value="">Select Student</option>
+</select>
+
+<select id="attendanceFaculty">
+    <option value="">Select Faculty</option>
+</select>
+
+        <input type="text" id="attendanceSubject" placeholder="Subject">
+
+        <input type="date" id="attendanceDate">
+
+        <select id="attendanceStatus">
+            <option value="">Select Status</option>
+            <option value="Present">Present</option>
+            <option value="Absent">Absent</option>
+        </select>
+
+        <button id="markAttendanceBtn">Mark Attendance</button>
+
+    </div>
+
+    <h3>Attendance Records</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Student</th>
+                <th>Faculty</th>
+                <th>Subject</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody id="attendanceTableBody">
+            <!-- Attendance records will appear here -->
+        </tbody>
+    </table>
+
+</section>
+
+<!-- Low Attendance Alert -->
+<section id="lowAttendance">
+
+    <h2>Low Attendance Alert</h2>
+
+    <div class="alert-box">
+        <p>Students with subject-wise attendance below 75%</p>
+    </div>
+
+    <table>
+        <thead>
+           <tr>
+    <th>Student Name</th>
+    <th>USN</th>
+    <th>Subject</th>
+    <th>Total Classes</th>
+    <th>Present</th>
+    <th>Attendance %</th>
+    <th>Alert</th>
+</tr>
+        </thead>
+
+        <tbody id="lowAttendanceTableBody">
+            <!-- Low attendance students will appear here -->
+        </tbody>
+    </table>
+
+</section>
+
+</main>
+
+
+
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,618 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+/* Navigation */
+nav {
+    background-color: white;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+nav button:hover {
+    background-color: #2980b9;
+}
+
+/* Main content */
+main {
+    padding: 30px;
+}
+
+#dashboard h2 {
+    margin-bottom: 20px;
+}
+
+/* Dashboard cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Responsive design */
+@media (max-width: 800px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Student Management */
+
+#students {
+    margin-top: 40px;
+}
+
+.student-form {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.student-form input {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.student-form button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #27ae60;
+    color: white;
+    cursor: pointer;
+}
+
+.student-form button:hover {
+    background-color: #219150;
+}
+
+/* Student Table */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    margin-top: 15px;
+}
+
+table th,
+table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+table th {
+    background-color: #2c3e50;
+    color: white;
+}
+
+/* Faculty Management */
+
+#faculty {
+    margin-top: 40px;
+}
+
+.faculty-form {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faculty-form input {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.faculty-form button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #27ae60;
+    color: white;
+    cursor: pointer;
+}
+
+.faculty-form button:hover {
+    background-color: #219150;
+}
+
+/* Attendance Management */
+
+#attendance {
+    margin-top: 40px;
+}
+
+.attendance-form {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.attendance-form input,
+.attendance-form select {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.attendance-form button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #27ae60;
+    color: white;
+    cursor: pointer;
+}
+
+.attendance-form button:hover {
+    background-color: #219150;
+}
+
+/* Low Attendance Alert */
+
+#lowAttendance {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.alert-box {
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    padding: 15px;
+    margin: 15px 0 25px;
+    border-radius: 8px;
+}
+
+.alert-box p {
+    margin: 0;
+    font-weight: bold;
+}
+
+/* ================================
+   MODERN UI UPGRADE
+================================ */
+
+body {
+    background: #eef2f7;
+}
+
+/* Header */
+header {
+    padding: 30px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+header h1 {
+    font-size: 32px;
+    letter-spacing: 0.5px;
+}
+
+header p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* Navigation */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 12px;
+}
+
+nav button {
+    border-radius: 8px;
+    padding: 11px 22px;
+    transition: 0.2s ease;
+}
+
+nav button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Dashboard */
+#dashboard {
+    margin-bottom: 40px;
+}
+
+#dashboard h2,
+#students h2,
+#faculty h2,
+#attendance h2,
+#lowAttendance h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+/* Dashboard Cards */
+.cards {
+    gap: 25px;
+}
+
+.card {
+    border: 1px solid #e1e5eb;
+    transition: 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card h3 {
+    font-size: 17px;
+}
+
+.card p {
+    font-size: 34px;
+}
+
+/* Forms */
+.student-form,
+.faculty-form,
+.attendance-form {
+    border: 1px solid #e1e5eb;
+    transition: 0.2s ease;
+}
+
+.student-form input,
+.student-form select,
+.faculty-form input,
+.attendance-form input,
+.attendance-form select {
+    min-width: 180px;
+    transition: 0.2s ease;
+}
+
+.student-form input:focus,
+.student-form select:focus,
+.faculty-form input:focus,
+.attendance-form input:focus,
+.attendance-form select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.12);
+}
+
+/* Tables */
+table {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+table th {
+    font-size: 14px;
+    padding: 14px 10px;
+}
+
+table td {
+    font-size: 14px;
+    padding: 13px 10px;
+}
+
+table tbody tr {
+    transition: 0.15s ease;
+}
+
+table tbody tr:hover {
+    background-color: #f5f9fd;
+}
+
+/* All Buttons inside tables */
+table button {
+    padding: 7px 12px;
+    margin: 2px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: white;
+}
+
+table button:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+}
+
+/* Low Attendance */
+.alert-box {
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+#lowAttendance table td:last-child {
+    font-weight: bold;
+}
+
+/* Responsive Tables */
+@media (max-width: 900px) {
+    main {
+        padding: 20px;
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 800px;
+    }
+
+    nav {
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+.cards {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 900px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ================================
+   DASHBOARD CARD DESIGN
+================================ */
+
+.card {
+    position: relative;
+    padding: 28px 20px;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.card-icon {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    margin-bottom: 8px;
+    font-size: 17px;
+}
+
+.card p {
+    font-size: 38px;
+    margin: 0;
+}
+
+/* Individual Cards */
+
+.student-card {
+    border-top: 5px solid #3498db;
+}
+
+.boy-card {
+    border-top: 5px solid #2980b9;
+}
+
+.girl-card {
+    border-top: 5px solid #e84393;
+}
+
+.faculty-card {
+    border-top: 5px solid #8e44ad;
+}
+
+.attendance-card {
+    border-top: 5px solid #27ae60;
+}
+
+.low-card {
+    border-top: 5px solid #e67e22;
+}
+
+/* Card Hover */
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.14);
+}
+
+
+
+/* ================================
+   ATTENDANCE STATUS
+================================ */
+
+.status {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.status.present {
+    background-color: #d4edda;
+    color: #218838;
+}
+
+.status.absent {
+    background-color: #f8d7da;
+    color: #c0392b;
+}
+
+
+
+/* ================================
+   LOW ATTENDANCE DESIGN
+================================ */
+
+.attendance-percentage {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background-color: #f8d7da;
+    color: #c0392b;
+    font-weight: bold;
+}
+
+.low-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background-color: #f8d7da;
+    color: #c0392b;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+
+
+/* ================================
+   ACTION BUTTONS
+================================ */
+
+.edit-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 7px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+.edit-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-1px);
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 7px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+    transform: translateY(-1px);
+}
+
+
+/* ================================
+   FORM LAYOUT UPGRADE
+================================ */
+
+.student-form,
+.faculty-form,
+.attendance-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Keep form elements consistent */
+.student-form input,
+.student-form select,
+.faculty-form input,
+.attendance-form input,
+.attendance-form select {
+    height: 42px;
+    margin: 0;
+}
+
+/* Buttons stay properly aligned */
+.student-form button,
+.faculty-form button,
+.attendance-form button {
+    height: 42px;
+    margin: 0;
+}
+
+/* Better spacing between sections */
+#students h3,
+#faculty h3,
+#attendance h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
